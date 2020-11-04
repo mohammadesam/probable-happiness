@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color:hsla(207, 95%, 8%, 1);
+}
+.question {
+    padding: 15px 20px;
+    margin: 70px 0;
+    width: 40vw;
+    border: solid gold 1px;
+    background-color:  hsla(35, 100%, 55%, 1);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.answers {
+   
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 1rem;
+}
+
+.answer {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background-color:hsla(353, 81%, 51%, 1);
+    border: solid black 1px;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.answer:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 500px) {
+    .answers {
+        grid-template-columns: repeat(2, 100px);
+    }
+}
+
+
+.correct {
+    background-color: lime;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.score {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+}
